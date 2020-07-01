@@ -6,8 +6,8 @@ mode bmc	#bounded module check
 
 [engines]
 smtbmc boolector
-#smtbmc yices
-#smtbmc z3
+smtbmc yices
+smtbmc z3
 
 
 [script]
