@@ -1,0 +1,20 @@
+[options]
+mode bmc	#bounded module check
+#mode prove	#k-induction
+#depth 100
+#expect fail
+
+[engines]
+smtbmc boolector
+#smtbmc yices
+#smtbmc z3
+
+
+[script]
+read -formal wrapper.sv
+read -formal PWM.v
+prep -top wrapper
+
+[files]
+PWM.v
+wrapper.sv
