@@ -43,7 +43,7 @@ SBY 21:15:49 [taller2] DONE (PASS, rc=1)
 ```
 a diferencia de la prueba con bmc, k-induction se toma 1 segundo de mas.
 
-## b. Diagrama de bloques explicativo.
+## b. Diagrama de bloque explicativo.
 ![./Arquitectura.png](./Arquitectura.png)
 
 ## C. Reglas Formales 
