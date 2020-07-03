@@ -50,7 +50,7 @@ a diferencia de la prueba con bmc, k-induction se toma 1 segundo de mas.
 
 |  | assume | assert |
 | --- | --- | --- |
-| 1. Se asume que el periodo es mayor a 0 | `assume (io_periodCounter > 0)` *Este assume aplica para todo el formal verification* | | 
+| 1. Se asume que el periodo es mayor a 0. | `assume (io_periodCounter > 0)` *Este assume aplica para todo el formal verification* | | 
 | 2. Se asume que el duty Cicle es menor al periodo y mayor a 0.| `assume (io_dutyCicle<io_periodCounter);assume (io_dutyCicle>0);`*Este assume aplica para todo el formal verification*|  | 
 | 3. Si el reset esta en alto, el contador debe ser 0. |  | `if (reset) begin assert (io_contador == 0); end` |
 | 4. Si el enable está en 0, la salida debe ser 0.  | | `if (!io_en)begin assert (io_out == 0); end` |
