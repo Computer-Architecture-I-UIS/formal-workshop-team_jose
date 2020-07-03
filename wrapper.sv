@@ -20,9 +20,9 @@ module wrapper(
        assume(reset);
     end
        
-    assume (io_dutyCicle<io_periodCounter && io_dutyCicle>0); 
+    assume (io_dutyCicle>0); 
     assume (io_periodCounter > 0);
-          
+    assume (io_dutyCicle<io_periodCounter);      
     
     
     if (!reset ) begin
@@ -44,9 +44,12 @@ module wrapper(
     	assert (io_out == 0);
     	end
     	
+    	if(io_contador>8'h1)begin
+    	assume(io_en);
+    	assert (io_contador==$past(io_contador)+1'b1);
+    	end
     	
     	
-
     	
     end
 /*END DEL ALWAYS*/
