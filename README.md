@@ -4,9 +4,8 @@
 
 |  | assume | assert |
 | --- | --- | --- |
-| 1. Inicialmente el circuito tiene que estar con un reset. | [x] | [ ] |
-
-| 1. Se asume que el periodo es mayor a 0 | `assume (io_periodCounter > 0)`; (Este assume aplica para todo el formal verification) | [ ] | 
+| 0. Inicialmente el circuito tiene que estar con un reset. | [x] | [ ] |
+| 1. Se asume que el periodo es mayor a 0 | `assume (io_periodCounter > 0)` (Este assume aplica para todo el formal verification) | [ ] | 
 | 2. Se asume que el duty Cicle es menor al periodo y mayor a 0.| [x] | [ ] | 
 | 3. Si el reset esta en alto, el contador debe ser 0. | [ ] | [x] |
 | 4. Si el enable está en 0, la salida debe ser 0.  | [ ] | [x] |
