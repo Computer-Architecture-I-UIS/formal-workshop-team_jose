@@ -1,13 +1,49 @@
 # Formal Verification
 
 ## a. Descripción de la verificación realizada.
-### 1. bounded module check:
+La verificación se realizó para ambas pruebas, con un total de pasos de 20 y motores de verifereicacion: boolector, yices y z3.
 ``` depth 20 
     [engines]
     smtbmc boolector
     smtbmc yices
     smtbmc z3
 ```
+### 1. bounded module check:
+Salida de la verificacion formal:
+```
+SBY 21:01:32 [taller2] engine_0: ##   0:00:02  Checking assertions in step 12..
+SBY 21:01:32 [taller2] engine_1: ##   0:00:02  Status: passed
+SBY 21:01:32 [taller2] engine_1: finished (returncode=0)
+SBY 21:01:32 [taller2] engine_1: Status returned by engine: pass
+SBY 21:01:32 [taller2] engine_0: terminating process
+SBY 21:01:32 [taller2] engine_2: terminating process
+SBY 21:01:32 [taller2] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:06 (6)
+SBY 21:01:32 [taller2] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:02 (2)
+SBY 21:01:32 [taller2] summary: engine_1 (smtbmc yices) returned pass
+SBY 21:01:32 [taller2] DONE (PASS, rc=1)
+```
+Se observa, para un total de 20 pasos el engine_1 termina primero, en la cual esta referenciado con el motor yices.
+
+### 2. k-induction:
+Salida de la verificación formal:
+```
+SBY 21:15:49 [taller2] engine_1.basecase: ##   0:00:03  Checking assertions in step 19..
+SBY 21:15:49 [taller2] engine_1.basecase: ##   0:00:03  Status: passed
+SBY 21:15:49 [taller2] engine_0.basecase: ##   0:00:03  Checking assumptions in step 13..
+SBY 21:15:49 [taller2] engine_1.basecase: finished (returncode=0)
+SBY 21:15:49 [taller2] engine_1: Status returned by engine for basecase: pass
+SBY 21:15:49 [taller2] engine_0.basecase: terminating process
+SBY 21:15:49 [taller2] engine_2.basecase: terminating process
+SBY 21:15:49 [taller2] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:05 (5)
+SBY 21:15:49 [taller2] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:02 (2)
+SBY 21:15:49 [taller2] summary: engine_1 (smtbmc yices) returned pass for induction
+SBY 21:15:49 [taller2] summary: engine_1 (smtbmc yices) returned pass for basecase
+SBY 21:15:49 [taller2] summary: successful proof by k-induction.
+SBY 21:15:49 [taller2] DONE (PASS, rc=1)
+```
+a diferencia de la prueba con bmc, k-induction se toma 1 segundo de mas.
+
+## b. Diagrama de bloques explicativo.
 
 
 ## C. Reglas Formales 
