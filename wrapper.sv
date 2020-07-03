@@ -34,6 +34,10 @@ module wrapper(
     	assert (io_out == 0);
     	end
     	
+    	if(io_en)begin
+    	assert(io_contador>=0);
+    	end
+    	
         if(io_contador <= io_dutyCicle && io_contador>0)begin
         assume (io_en);
     	assert (io_out == 1);
