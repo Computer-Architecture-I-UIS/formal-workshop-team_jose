@@ -1,5 +1,15 @@
 # Formal Verification
 
+## a. Descripción de la verificación realizada.
+### 1. bounded module check:
+``` depth 20 
+    [engines]
+    smtbmc boolector
+    smtbmc yices
+    smtbmc z3
+```
+
+
 ## C. Reglas Formales 
 
 |  | assume | assert |
