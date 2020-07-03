@@ -1,7 +1,7 @@
 # Formal Verification
 
 ## a. Descripción de la verificación realizada.
-La verificación se realizó para ambas pruebas, con un total de pasos de 20 y motores de verifereicacion: boolector, yices y z3.
+La verificación se realizó para ambas pruebas, con un total de pasos de 20 y 3 motores: boolector, yices y z3.
 ``` depth 20 
     [engines]
     smtbmc boolector
